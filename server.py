@@ -1,4 +1,5 @@
 from flask import Flask,request,jsonify,render_template,make_response
+from PIL import Image
 import base64
 import cv2
 import io
@@ -29,11 +30,12 @@ def extension_led(name):
 
 @app.route('/mnist', methods = ['POST'])
 def mnist():
+  from models.mnist.predict import predict
   img_data = request.get_json().get('data')
-  result = random.randint(0,9)
-
-
-
+  img_data = base64.b64decode(img_data)
+  img = Image.open(io.BytesIO(img_data))
+  result = predict(img)
+  print(result)
   display(150, 50, result)
   return jsonify({"class":str(result)})
 
