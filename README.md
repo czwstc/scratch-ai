@@ -12,6 +12,7 @@ if you use Raspberry Pi, you can follow the instructions in install/raspberry_pi
 
 Start python server
 -------------------
+Run this in console:
 ```Bash
 git clone https://github.com/augustye/scratch-ai
 cd scratch-ai
