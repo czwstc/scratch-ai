@@ -34,7 +34,7 @@ def mnist():
 
 
 
-  display(150, -20, result)
+  display(150, 50, result)
   return jsonify({"class":str(result)})
 
 @app.after_request
