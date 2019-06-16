@@ -1,15 +1,11 @@
-# pynq-scratch
-PYNQ-Z2 board + Scratch 3.0
+# scratch-ai
 
-Start python server on PYNQ-Z2 board:
-----------------------------------
+Start python server on Raspberry Pi:
+------------------------------------
 ```Bash
-sudo pip3 install git+https://github.com/Xilinx/BNN-PYNQ.git
 sudo pip3 install flask
-git clone https://github.com/augustye/pynq-scratch
-cd pynq-scratch
-#release port 80
-sudo pkill -f redirect_server
+git clone https://github.com/augustye/scratch-ai
+cd scratch-ai
 sudo python3 server.py
 ```
 
