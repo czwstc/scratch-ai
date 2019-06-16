@@ -8,7 +8,7 @@ Required Python packages
  - flask 
  - Pillow
 
-if you use Raspberry Pi, you can follow the instructions in [install/raspberry_pi.sh](https://github.com/augustye/scratch-ai/blob/master/install/raspberry_pi.sh)
+If you use Raspberry Pi, you can follow the instructions in [install/raspberry_pi.sh](https://github.com/augustye/scratch-ai/blob/master/install/raspberry_pi.sh)
 
 Start python server
 -------------------
