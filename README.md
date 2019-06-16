@@ -1,5 +1,14 @@
 # scratch-ai
 
+Required Python packages
+-------------------------
+ - tensorflow 1.12
+ - opencv 3.4
+ - pygame 
+ - flask 
+ - Pillow
+* if you use Raspberry Pi, you can follow the instructions in install/raspberry_pi.sh
+
 Start python server
 -------------------
 ```Bash
