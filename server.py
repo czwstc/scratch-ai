@@ -35,7 +35,7 @@ def extension_led(name):
 @app.route('/mnist', methods = ['POST'])
 def mnist():
   img_data = request.get_json().get('data')
-  result = random.random()
+  result = random.randint(0,9)
 
 
 
