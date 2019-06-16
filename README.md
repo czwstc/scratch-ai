@@ -1,6 +1,6 @@
 # scratch-ai
 
-Required Python packages
+Required Python 3 packages
 -------------------------
  - tensorflow 1.12
  - opencv 3.4
