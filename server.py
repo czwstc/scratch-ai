@@ -13,12 +13,12 @@ def display_init():
   os.environ["SDL_MOUSEDEV"] = "/dev/tty0"
   pygame.init()
 
-def display(text):
+def display(x, y, text):
   screen = pygame.display.set_mode((480,320))
-  font = pygame.font.SysFont("comicsansms", 72)
+  font = pygame.font.SysFont("comicsansms", 256)
   text = font.render(str(text), True, (0, 128, 0))
   screen.fill((255, 255, 255))
-  screen.blit(text,(50, 50))
+  screen.blit(text,(x, y))
   pygame.display.flip()
 
 @app.route('/extension/<name>')
@@ -34,7 +34,7 @@ def mnist():
 
 
 
-  display(result)
+  display(150, -20, result)
   return jsonify({"class":str(result)})
 
 @app.after_request
