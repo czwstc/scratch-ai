@@ -10,6 +10,7 @@ import random
 app = Flask(__name__)
 
 def display_init():
+  os.environ["DISPLAY"] = ":0"
   pygame.display.init()
   pygame.font.init()
 
