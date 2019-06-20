@@ -15,7 +15,8 @@ def display_init(hdmi=True):
     os.environ["SDL_MOUSEDEV"] = "/dev/tty0"
   else:
     os.environ["DISPLAY"] = ":0"
-  pygame.init()
+  pygame.display.init()
+  pygame.font.init()
 
 def display(x, y, text):
   screen = pygame.display.set_mode((480,320))
