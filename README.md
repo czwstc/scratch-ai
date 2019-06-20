@@ -2,13 +2,16 @@
 
 Required Python 3 packages
 -------------------------
- - tensorflow 1.12
- - opencv 3.4
+ - tensorflow 1.x
+ - opencv 3.x
  - pygame 
  - flask 
  - Pillow
 
 If you use Raspberry Pi, you can follow the instructions in [install/raspberry_pi.sh](https://github.com/augustye/scratch-ai/blob/master/install/raspberry_pi.sh)
+
+If you use Jetson Nano, you can follow the instructions in [install/jetson_nano.sh](https://github.com/augustye/scratch-ai/blob/master/install/jetson_nano.sh)
+
 
 Start python server
 -------------------
