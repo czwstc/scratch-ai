@@ -19,7 +19,7 @@ Run this in console:
 ```Bash
 git clone https://github.com/augustye/scratch-ai
 cd scratch-ai
-sudo python3 server.py
+python3 server.py
 ```
 
 Run Scratch 3.0 in Browser:
