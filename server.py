@@ -10,11 +10,11 @@ import random
 app = Flask(__name__)
 
 def display_init(hdmi=True):
-    if not hdmi:
-      os.environ["SDL_FBDEV"]    = "/dev/fb1"
-      os.environ["SDL_MOUSEDEV"] = "/dev/tty0"
-    else:
-      os.environ["DISPLAY"] = ":0"
+  if not hdmi:
+    os.environ["SDL_FBDEV"]    = "/dev/fb1"
+    os.environ["SDL_MOUSEDEV"] = "/dev/tty0"
+  else:
+    os.environ["DISPLAY"] = ":0"
   pygame.init()
 
 def display(x, y, text):
