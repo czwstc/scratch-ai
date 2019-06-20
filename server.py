@@ -9,18 +9,17 @@ import random
 
 app = Flask(__name__)
 
-def display_init(hdmi=True):
-  if not hdmi:
-    os.environ["SDL_FBDEV"]    = "/dev/fb1"
-    os.environ["SDL_MOUSEDEV"] = "/dev/tty0"
-  else:
-    os.environ["DISPLAY"] = ":0"
+def display_init():
   pygame.display.init()
   pygame.font.init()
 
 def display(x, y, text):
-  #screen = pygame.display.set_mode((640,480))
-  screen = pygame.display.set_mode((480,320))
+  if os.environ["SDL_FBDEV"] == "/dev/fb1":
+    #raspberry spi screen
+    screen = pygame.display.set_mode((480,320))
+  else:
+    #default hdmi screen
+    screen = pygame.display.set_mode((640,480))
   font = pygame.font.SysFont("comicsansms", 128)
   text = font.render(str(text), True, (0, 128, 0))
   screen.fill((255, 255, 255))
