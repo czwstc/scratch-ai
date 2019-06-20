@@ -19,7 +19,8 @@ def display_init(hdmi=True):
   pygame.font.init()
 
 def display(x, y, text):
-  screen = pygame.display.set_mode((640,480))
+  #screen = pygame.display.set_mode((640,480))
+  screen = pygame.display.set_mode((480,320))
   font = pygame.font.SysFont("comicsansms", 128)
   text = font.render(str(text), True, (0, 128, 0))
   screen.fill((255, 255, 255))
