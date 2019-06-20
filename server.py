@@ -14,8 +14,8 @@ def display_init():
   pygame.font.init()
 
 def display(x, y, text):
-  if os.environ["SDL_FBDEV"] == "/dev/fb1":
-    #raspberry spi screen
+  if "SDL_FBDEV" in os.environ: 
+    #raspberry spi screen: SDL_FBDEV=/dev/fb1
     screen = pygame.display.set_mode((480,320))
   else:
     #default hdmi screen
