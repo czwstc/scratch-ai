@@ -6,6 +6,7 @@ import io
 import os
 import pygame
 import random
+import time
 
 app = Flask(__name__)
 
@@ -35,11 +36,17 @@ def extension_led(name):
 
 @app.route('/mnist', methods = ['POST'])
 def mnist():
+  start_time = time.time()
   from models.mnist.predict import predict
   img_data = request.get_json().get('data')
   img_data = base64.b64decode(img_data)
   img = Image.open(io.BytesIO(img_data))
+  print("prepare time: ", time.time()-start_time)
+
+  start_time = time.time()
   result = predict(img)
+  print("predict time: ", time.time()-start_time)
+
   print(result)
   display(150, 50, result)
   return jsonify({"class":str(result)})
