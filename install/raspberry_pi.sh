@@ -1,5 +1,5 @@
 #!/bin/bash
-# Based on: Raspbian Stretch Lite
+# Based on: 2019-04-08-raspbian-stretch-full
 
 #############################################
 #          Install python3 packages

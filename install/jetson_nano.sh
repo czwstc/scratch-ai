@@ -1,4 +1,5 @@
 #!/bin/bash
+# Based on: jetson-nano-sd-r32.1.1-2019-05-31
 
 #apt source
 sudo su
@@ -29,7 +30,7 @@ EOF
 exit
 
 #pip packages
-sudo pip3 install pygame futures==2.2 flask Pillow 
+sudo pip3 install pygame futures==2.2 flask Pillow keras==2.0.9
 
 #tensorflow
 wget https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.13.1+nv19.3-cp36-cp36m-linux_aarch64.whl
