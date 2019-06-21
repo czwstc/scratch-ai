@@ -6,13 +6,15 @@ import io
 import os
 import pygame
 import random
+import models.mnist.predict as predict
 
 app = Flask(__name__)
 
-def display_init():
+def init():
   os.environ["DISPLAY"] = ":0"
   pygame.display.init()
   pygame.font.init()
+  predict.init()
 
 def display(x, y, text):
   if "SDL_FBDEV" in os.environ: 
@@ -35,13 +37,10 @@ def extension_led(name):
 
 @app.route('/mnist', methods = ['POST'])
 def mnist():
-  
-
-  from models.mnist.predict import predict
   img_data = request.get_json().get('data')
   img_data = base64.b64decode(img_data)
   img = Image.open(io.BytesIO(img_data))
-  result = predict(img)
+  result = predict.predict(img)
   print(result)
   display(150, 50, result)
   return jsonify({"class":str(result)})
@@ -54,5 +53,5 @@ def after_request(response):
   return response
 
 if __name__ == '__main__':
-  display_init()
+  init()
   app.run(host='0.0.0.0', port=8888)
