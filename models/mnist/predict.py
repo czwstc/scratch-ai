@@ -16,7 +16,7 @@ def predict(img):
 		model = tf.saved_model.loader.load(sess, ['Captcha'], MODELS_DIR)
 		image = sess.graph.get_tensor_by_name(model.signature_def['signature'].inputs["image"].name)
 		captcha = sess.graph.get_tensor_by_name(model.signature_def['signature'].outputs["captcha"].name)
-  		print("load model time: ", time.time()-start_time)
+		print("load model time: ", time.time()-start_time)
 
 		#run model
 		start_time = time.time()
