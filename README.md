@@ -21,6 +21,7 @@ git clone https://github.com/augustye/scratch-ai
 cd scratch-ai
 python3 server.py
 ```
+If you use a console-only system without X window, you need to run the commands with root to see the display
 
 Run Scratch 3.0 in Browser:
 ---------------------------
