@@ -5,8 +5,7 @@
 sudo su
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cat > /etc/apt/sources.list<<-EOF
-deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi
 EOF
 apt update
 exit

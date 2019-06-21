@@ -30,7 +30,7 @@ EOF
 exit
 
 #pip packages
-sudo pip3 install pygame futures==2.2 flask Pillow keras==2.0.9
+sudo pip3 install pygame futures==2.2 flask Pillow keras==2.0.9 numpy==1.16.4
 
 #tensorflow
 wget https://developer.download.nvidia.com/compute/redist/jp/v42/tensorflow-gpu/tensorflow_gpu-1.13.1+nv19.3-cp36-cp36m-linux_aarch64.whl
