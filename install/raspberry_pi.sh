@@ -5,7 +5,7 @@
 #          Install python3 packages
 #############################################
 sudo apt update
-sudo apt install python3-pip python3-h5py\
+sudo apt install python3-pip python3-h5py python3-scipy\
     libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libportmidi-dev \
     libatlas-base-dev libjasper1 libilmbase-dev libopenexr-dev libgstreamer1.0-dev libswscale-dev \
     libavformat-dev libavcodec-dev libpng-dev libjpeg-dev libqttest4-perl libhdf5-dev gfortran 
